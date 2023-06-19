@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Roboto';
+    list-style: none;
+}
+
+:root {
+    --background-dark: #222020;
+    --background-light: #d6d6d6;
+    --background-light-hover: #f0f0f0;
+    --background-dark-secondary: #313131;
+    --background-dark-thirty: #272626;
+    --text-color: #f1f1f1;
+    --text-color-secondary: #252525;
+    --green-color: #7cfc9c;
+    --green-color-active: #5fbe77;
+    --red-color: #f35f5f;
+    --grey-color: #979797;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: var(--background-dark-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--green-color);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--green-color-active);
+}
+
+.app_wrapper {
+    background-color: var(--background-dark);
+    min-height: 100vh;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+
+    .app_container {
+        display: flex;
+        flex-direction: column;
+        // row-gap: 20px;
+        width: 100%;
+        max-width: 1120px;
+        padding: 10px 0;
+
+        .header {
+            background-color: var(--background-dark-secondary);
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            overflow: hidden;
+            z-index: 20;
+
+            .nav_wrapper {
+                display: flex;
+
+                .nav_item {
+                    padding: 14px 20px;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: var(--text-color);
+                    font-weight: 400;
+
+                }
+
+                .active {
+                    color: var(--green-color);
+                    background-color: var(--background-dark-thirty);
+                }
+            }
+        }
+    }
+}
